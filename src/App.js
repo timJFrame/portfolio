@@ -1,19 +1,22 @@
 import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-class App extends React.Component {
-  async componentDidMount() {
-    try {
-      const response = await fetch('/api/resource-name')
-      const data = await response.json()
-      console.log(data)
-    } catch (err) {
-      console.log(err)
-    }
-  }
+import NavBar from './components/common/NavBar'
+import Home from './components/common/Home'
+import Projects from './components/content/Projects'
+import About from './components/content/About'
 
-  render() {
-    return null
-  }
+function App(){
+  return(
+    <BrowserRouter>
+    <NavBar/>
+    <Switch>
+      <Route path="/projects" component={Projects}/>
+      <Route path="/about" component={About}/>
+      <Route exact path="/" component={Home}/>
+    </Switch>
+    </BrowserRouter>
+    )
 }
 
 export default App
