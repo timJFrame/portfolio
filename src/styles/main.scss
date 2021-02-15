@@ -1,7 +1,135 @@
 @import 'navbar';
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+@import "~bootstrap/scss/bootstrap";
 
 //* Main page container
 .page-container{
     display: flex;
     margin: 30px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Dosis', sans-serif;
+}
+
+
+.intro-container-div{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-div{
+display: flex;
+flex-direction: column;
+margin-top: 50px;
+justify-content: center;
+align-items: center;
+h2{
+    font-size: 5em;
+    margin: 50px 0 0 0;
+    font-weight: 200;
+    letter-spacing: 10px;
+}
+h3{
+    font-size: 2em;
+    font-weight: 100;
+    margin:0;
+    letter-spacing: 10px;
+}
+}
+
+.intro-button-div{
+    height: 60vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+ }
+
+
+.container-div{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.content-div{
+    display: flex;
+    flex-direction: column;
+    h2{
+        font-size: 4em;
+       margin: 20px 0px;
+        font-weight: 200;
+        letter-spacing: 10px;
+    }
+    }
+
+.text-and-carousel-conatiner{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+.bio-text{
+        flex:1;
+    }
+
+.carousel-div{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    li{
+        display: none;
+    }
+ 
+}
+
+.bio-button-div{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+ }
+
+.section-image{
+    max-width: 50%;
+    border-radius: 300px;
+    margin-bottom: 5px;
+  
+}
+
+.button-div{
+   height: 75vh;
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+}
+
+.sunflower-image{
+    max-height: 75px;
+}
+
+.skills-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly
+}
+
+.skills-div{
+    display: flex;
+    flex-direction: column;
+ 
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 5px 10px;
 }
