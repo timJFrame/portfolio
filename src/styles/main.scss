@@ -82,14 +82,16 @@ h3{
 
 .bio-text{
         flex:1;
+        line-height: 2;
     }
 
 .carousel-div{
-    flex: 2;
+    flex: 1.5;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+   transition: 3s ease;
     li{
         display: none;
     }
@@ -100,6 +102,8 @@ h3{
     max-width: 50%;
     border-radius: 300px;
     margin-bottom: 5px;
+      transition-timing-function: ease-in;
+    transition-timing-function: ease-out;
   
 }
 
@@ -172,6 +176,9 @@ h3{
         font-weight: 100;
         padding: 5px;
     }
+    p{
+        font-weight: 200;
+    }
 }
 
 .project-image{
@@ -182,4 +189,23 @@ h3{
     margin-top: 10px;
     align-self: flex-end;
     justify-self: flex-end
+}
+
+.modal-subheading{
+    font-weight: 400;
+}
+
+.modal-content-text{
+    font-weight: 200;
+}
+
+.modal-link{
+    color: gray;
+    letter-spacing: 2px;
+    margin: 5px 20px;
+}
+
+.modal-card{
+    letter-spacing: 2px;
+    line-height: 2;
 }

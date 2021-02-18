@@ -1,5 +1,6 @@
 import React from 'react'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
+import Carousel from 'react-bootstrap/Carousel'
 import introImage from './images/1.jpg'
 import beeKeepr from './images/2.jpg'
 import runner from './images/4.jpg'
@@ -10,7 +11,6 @@ import poppy from './images/poppy.gif'
 import tulip from './images/tulip.gif'
 import daisy from './images/daisy.gif'
 import carrotButton from './images/button.png'
-import Carousel from 'react-bootstrap/Carousel'
 import beginnerSkills from './data/beginnerSkills'
 import confidentSkills from './data/confidentSkills'
 import visualSkills from './data/visualSkills'
@@ -56,31 +56,35 @@ class App extends React.Component {
                 </div>
 
                <div className="carousel-div">
-               <Carousel>
-
-                 <Carousel.Item  interval={2000}>
+               <Carousel slide={false}>
+               
+               
+                 <Carousel.Item  interval={3000}>
+              
                    <img className="section-image"
                    src={introImage}
                    alt="gardner"/>
                 <h3>Keen Gardner</h3>
+               
                 </Carousel.Item>
+              
 
-                <Carousel.Item  interval={2000}>
+                <Carousel.Item  interval={3000}>
                    <img  className="section-image"
                    src={coder}
                    alt="coder"/>
-                   <h3>Curios Coder</h3>
+                   <h3>Curious Coder</h3>
                  </Carousel.Item>
                  
               
-                <Carousel.Item  interval={2000}>
+                <Carousel.Item  interval={3000}>
                    <img  className="section-image"
                    src={french}
                    alt="french"/>
                    <h3>Avid Learner of the French Language</h3>
                  </Carousel.Item>
 
-                 <Carousel.Item  interval={2000}>
+                 <Carousel.Item  interval={3000}>
                    <img  className="section-image"
                    src={runner}
                    alt="runner"/>
@@ -88,7 +92,7 @@ class App extends React.Component {
                  </Carousel.Item>
 
                  
-                 <Carousel.Item  interval={2000}>
+                 <Carousel.Item  interval={3000}>
                    <img  className="section-image"
                    src={beeKeepr}
                    alt="bee keeper"/>
