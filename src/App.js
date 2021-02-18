@@ -1,108 +1,24 @@
 import React from 'react'
+import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import introImage from './images/1.jpg'
 import beeKeepr from './images/2.jpg'
+import runner from './images/4.jpg'
 import french from './images/3.jpg'
+import coder from './images/5.jpg'
 import sunflower from './images/sunflower.gif'
+import poppy from './images/poppy.gif'
+import tulip from './images/tulip.gif'
+import daisy from './images/daisy.gif'
 import carrotButton from './images/button.png'
 import Carousel from 'react-bootstrap/Carousel'
-import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
+import beginnerSkills from './data/beginnerSkills'
+import confidentSkills from './data/confidentSkills'
+import visualSkills from './data/visualSkills'
+import softSkills from './data/softSkills'
+import Projects from './components/Projects'
 
 
-const skills = [
-  {
-    skill: 'HTML',
-    image: sunflower
-  },
-  {
-    skill: 'CSS',
-    image: sunflower
-  },
-  {
-    skill: 'Sass',
-    image: sunflower
-  },
-  {
-    skill: 'Bulma',
-    image: sunflower
-  },
-  {
-    skill: 'Milligram',
-    image: sunflower
-  },  
-  {
-    skill: 'JavaScript',
-    image: sunflower
-  },
-  {
-    skill: 'React',
-    image: sunflower
-  },
-  {
-    skill: 'Node',
-    image: sunflower
-  },
-  {
-    skill: 'Express',
-    image: sunflower
-  },
-  {
-    skill: 'MongoDB',
-    image: sunflower
-  },
-  {
-    skill: 'Mongoose',
-    image: sunflower
-  },
-  {
-    skill: 'Python',
-    image: sunflower
-  },
-  {
-    skill: 'Django',
-    image: sunflower
-  },
-  
-  {
-    skill: 'PostgresSQL',
-    image: sunflower
-  },
-  {
-    skill: 'Git',
-    image: sunflower
-  },
-  {
-    skill: 'GitHub',
-    image: sunflower
-  },
-  {
-    skill: 'Yarn',
-    image: sunflower
-  },
-  {
-    skill: 'NPM',
-    image: sunflower
-  },
-  {
-    skill: 'Insomina',
-    image: sunflower
-  },
-  {
-    skill: 'VS Code',
-    image: sunflower
-  },
-  {
-    skill: 'iTerm',
-    image: sunflower
-  },
-  {
-    skill: 'MapBox',
-    image: sunflower
-  },
-  {
-    skill: 'Django REST Framework',
-    image: sunflower
-  },
-]
+
 
 class App extends React.Component {
     render(){
@@ -141,34 +57,52 @@ class App extends React.Component {
 
                <div className="carousel-div">
                <Carousel>
+
                  <Carousel.Item  interval={2000}>
                    <img className="section-image"
                    src={introImage}
-                   alt="intro"/>
-                   
+                   alt="gardner"/>
                 <h3>Keen Gardner</h3>
-              
-                 </Carousel.Item>
-                 <Carousel.Item  interval={2000}>
+                </Carousel.Item>
+
+                <Carousel.Item  interval={2000}>
                    <img  className="section-image"
-                   src={beeKeepr}
-                   alt="intro"/>
-                   <h3>Future Bee Keeper</h3>
+                   src={coder}
+                   alt="coder"/>
+                   <h3>Curios Coder</h3>
+                 </Carousel.Item>
+                 
+              
+                <Carousel.Item  interval={2000}>
+                   <img  className="section-image"
+                   src={french}
+                   alt="french"/>
+                   <h3>Avid Learner of the French Language</h3>
                  </Carousel.Item>
 
                  <Carousel.Item  interval={2000}>
                    <img  className="section-image"
-                   src={french}
-                   alt="intro"/>
-                   <h3>Avid Learner of the French Language</h3>
+                   src={runner}
+                   alt="runner"/>
+                   <h3>Active Runner</h3>
                  </Carousel.Item>
+
+                 
+                 <Carousel.Item  interval={2000}>
+                   <img  className="section-image"
+                   src={beeKeepr}
+                   alt="bee keeper"/>
+                   <h3>Future Bee Keeper</h3>
+                 </Carousel.Item>
+
+                
                </Carousel>
                </div>
                </div>
                
              </div>
 
-             <div className="bio-button-div">
+             <div className="button-div">
               <img src={carrotButton} alt="carrot button"   onClick={() => this.parallax.scrollTo(2)}/>
              </div>
              </div>
@@ -179,19 +113,59 @@ class App extends React.Component {
              <div className="content-div">
                <div className="content-heading-div">
                <h2>Skills</h2>
+               <div className="skills-key-div">
+               <div className="skill-type-div">
+                
+                
+                 </div>
+                 <div className="skill-type-div">
+                 <p>Confident = </p>
+                 <img src={sunflower} alt="sunflower" className="flower-image"/>
+                 </div>
+                 <div className="skill-type-div">
+                 <p>Beginner = </p>
+                 <img src={poppy} alt="poppy" className="flower-image"/>
+                 </div>
+                 <div className="skill-type-div">
+                 <p>Visual = </p>
+                 <img src={tulip} alt="tulip" className="flower-image"/>
+                 </div>
+                 <div className="skill-type-div">
+                 <p>Soft = </p>
+                 <img src={daisy} alt="daisy" className="flower-image"/>
+                 </div>
+               </div>
                </div>
                <div className="skills-container">
-                 {skills.map(skill => (
+                 {confidentSkills.map(skill => (
                    <div className="skills-div">
-                    <img src={skill.image} alt="sunflower" className="sunflower-image"/>
+                    <img src={skill.image} alt="sunflower" className="flower-image"/>
                     <p>{skill.skill}</p>
                     </div>
                  ))
-
+                 }
+                  {beginnerSkills.map(skill => (
+                   <div className="skills-div">
+                    <img src={skill.image} alt="poppy" className="flower-image"/>
+                    <p>{skill.skill}</p>
+                    </div>
+                 ))
+                 }
+                  {visualSkills.map(skill => (
+                   <div className="skills-div">
+                    <img src={skill.image} alt="tulip" className="flower-image"/>
+                    <p>{skill.skill}</p>
+                    </div>
+                 ))
+                 }
+                  {softSkills.map(skill => (
+                   <div className="skills-div">
+                    <img src={skill.image} alt="daisy" className="flower-image"/>
+                    <p>{skill.skill}</p>
+                    </div>
+                 ))
                  }
                </div>
-               
-              
              </div>
 
              <div className="button-div">
@@ -206,6 +180,7 @@ class App extends React.Component {
                <div className="content-heading-div">
                <h2>Projects</h2>
                </div>
+               <Projects/>
              </div>
 
              <div className="button-div">
