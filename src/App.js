@@ -1,11 +1,6 @@
 import React from 'react'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
-import Carousel from 'react-bootstrap/Carousel'
-import introImage from './images/1.jpg'
-import beeKeepr from './images/2.jpg'
-import runner from './images/4.jpg'
-import french from './images/3.jpg'
-import coder from './images/5.jpg'
+import ImageSlider from './components/ImageSlider'
 import sunflower from './images/sunflower.gif'
 import poppy from './images/poppy.gif'
 import tulip from './images/tulip.gif'
@@ -31,77 +26,47 @@ class App extends React.Component {
            
            <ParallaxLayer factor={1} offset={0} speed={0.5}>
              <div className="intro-container-div">
+               <div className="mock-nav-bar">
+               <ul >
+                 <li onClick={() => this.parallax.scrollTo(1)}><button>Bio</button></li>
+                 <li onClick={() => this.parallax.scrollTo(2)}><button>Skills</button></li>
+                 <li onClick={() => this.parallax.scrollTo(3)}><button>Projects</button></li>
+                 <li onClick={() => this.parallax.scrollTo(4)}><button>Contact</button></li>
+               </ul>
+               </div>
+
              <div className="intro-div">
              <h2>Timothy Frame</h2>
              <h3>Junior full-stack developer</h3>
              </div>
 
-             <div className="intro-button-div">
+             <div className="button-div">
               <img src={carrotButton} alt="carrot button"   onClick={() => this.parallax.scrollTo(1)}/>
              </div>
              </div>
            </ParallaxLayer>
 
            <ParallaxLayer factor={1} offset={1} speed={0.5}>
+
             <div className="container-div">
+ 
              <div className="content-div">
+               
                <div className="content-heading-div">
                <h2>Bio</h2>
                </div>
                
                <div className="text-and-carousel-conatiner">
+
                <div className="bio-text">
                <p>The process of creation and problem solving are two key concepts that have been prevalent to me while working as a photographer/retoucher. I began learning JavaScript to improve my Photoshop work-flow and discovered a passion for coding. Developing my technical skills and pair coding experiences with an Immersive Software Engineering program at General Assembly.</p>
                 <p>I’m now looking to continue my coding journey as a junior full-stack developer within a workplace that prides itself on employee development and where I can make a valid contribution using my prior experience in visual aesthetics married with my strong technical skills in order to help develop a positive user experience. I'm also a....</p>
                 </div>
 
                <div className="carousel-div">
-               <Carousel slide={false}>
-               
-               
-                 <Carousel.Item  interval={3000}>
-              
-                   <img className="section-image"
-                   src={introImage}
-                   alt="gardner"/>
-                <h3>Keen Gardner</h3>
-               
-                </Carousel.Item>
-              
-
-                <Carousel.Item  interval={3000}>
-                   <img  className="section-image"
-                   src={coder}
-                   alt="coder"/>
-                   <h3>Curious Coder</h3>
-                 </Carousel.Item>
-                 
-              
-                <Carousel.Item  interval={3000}>
-                   <img  className="section-image"
-                   src={french}
-                   alt="french"/>
-                   <h3>Avid Learner of the French Language</h3>
-                 </Carousel.Item>
-
-                 <Carousel.Item  interval={3000}>
-                   <img  className="section-image"
-                   src={runner}
-                   alt="runner"/>
-                   <h3>Active Runner</h3>
-                 </Carousel.Item>
-
-                 
-                 <Carousel.Item  interval={3000}>
-                   <img  className="section-image"
-                   src={beeKeepr}
-                   alt="bee keeper"/>
-                   <h3>Future Bee Keeper</h3>
-                 </Carousel.Item>
-
-                
-               </Carousel>
+                 <ImageSlider/>
                </div>
+               
                </div>
                
              </div>
@@ -109,6 +74,7 @@ class App extends React.Component {
              <div className="button-div">
               <img src={carrotButton} alt="carrot button"   onClick={() => this.parallax.scrollTo(2)}/>
              </div>
+
              </div>
            </ParallaxLayer>
 

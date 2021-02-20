@@ -26,12 +26,29 @@ body{
     align-items: center;
 }
 
+.mock-nav-bar{
+    ul{
+        display: flex;
+        justify-content: flex-start;
+        li{
+            margin:5px 70px;
+            padding:10px;
+            list-style: none;
+            button{
+                border: none;
+                background-color: white;
+            }
+        }
+    }
+}
+
 .intro-div{
 display: flex;
 flex-direction: column;
-margin-top: 50px;
+
 justify-content: center;
 align-items: center;
+height: 70vh;
 h2{
     font-size: 5em;
     margin: 50px 0 0 0;
@@ -46,38 +63,44 @@ h3{
 }
 }
 
-.intro-button-div{
-    height: 60vh;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
- }
-
 
 .container-div{
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    
 }
 
 .content-div{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: 85vh;
+    }
+
+.content-heading-div{
     h2{
         font-size: 4em;
        margin: 20px 0px;
         font-weight: 200;
         letter-spacing: 10px;
+        
     }
-    }
+}
 
-.text-and-carousel-conatiner{
+.button-div{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+ }
+ 
+
+.text-and-carousel-conatiner{ 
         display: flex;
         justify-content: center;
         align-content: center;
+        align-self: center;
+        justify-self: center;
     }
 
 .bio-text{
@@ -102,16 +125,10 @@ h3{
     max-width: 50%;
     border-radius: 300px;
     margin-bottom: 5px;
-      transition-timing-function: ease-in;
-    transition-timing-function: ease-out;
+    will-change: opacity;
   
 }
 
-.button-div{
-   display: flex;
-   align-items: flex-end;
-   justify-content: center;
-}
 
 .flower-image{
     max-height: 50px;
@@ -156,9 +173,7 @@ h3{
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    
-    
+    align-items: center; 
 }
 
 .project-card{
@@ -166,11 +181,9 @@ h3{
     flex-direction: column;
     align-items: center;
     padding: 10px 0 0 0;
-    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin: 20px;
-    width: 400px;
-    max-height: 300px;
+    margin: 10px;
+    border: 1px solid rgba(0,0,0, 0.1);
 
     h4{
         font-weight: 100;
@@ -188,7 +201,8 @@ h3{
 .project-card-button{
     margin-top: 10px;
     align-self: flex-end;
-    justify-self: flex-end
+    justify-self: flex-end;
+    color: grey;
 }
 
 .modal-subheading{
@@ -208,4 +222,18 @@ h3{
 .modal-card{
     letter-spacing: 2px;
     line-height: 2;
+}
+
+.modal-images-container{
+    display:flex;
+   
+}
+
+.modal-image{
+    max-width: 50%;
+}
+
+.slide-text{
+    font-weight: 300;
+    font-size: 1.5em;
 }
