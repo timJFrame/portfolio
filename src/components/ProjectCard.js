@@ -2,27 +2,24 @@
 import React from 'react'
 import  Modal  from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
-import Carousel from 'react-bootstrap/Carousel'
-
 
 
 function ProjectCard({name, image, description, project, projectType, technologies, projectLink, githubLink, displayImageOne, displayImageTwo }){
 
     const [show, setShow] = React.useState(false)
-
     const handleClose = () => setShow(false)
     const handleShow = () => setShow(true)
 
     return(
         <>
         
-        <div className="project-card" >
+        <div className="project-card"  onClick={handleShow} >
             <h4>{name}</h4>
             <img src={image} alt={name} className="project-image"/>
             <Button 
             variant="link"
             size="sm" block
-            onClick={handleShow}
+           
             className="project-card-button"
             >
             Info</Button>

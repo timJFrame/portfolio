@@ -5,14 +5,15 @@ import sunflower from './images/sunflower.gif'
 import poppy from './images/poppy.gif'
 import tulip from './images/tulip.gif'
 import daisy from './images/daisy.gif'
+import githubLogo from './images/github-logo.png'
+import linkedinLogo from './images/linkedin-logo.png'
+import emailLogo from './images/mail-logo.png'
 import carrotButton from './images/button.png'
 import beginnerSkills from './data/beginnerSkills'
 import confidentSkills from './data/confidentSkills'
 import visualSkills from './data/visualSkills'
 import softSkills from './data/softSkills'
 import Projects from './components/Projects'
-
-
 
 
 class App extends React.Component {
@@ -35,6 +36,7 @@ class App extends React.Component {
                </ul>
                </div>
 
+
              <div className="intro-div">
              <h2>Timothy Frame</h2>
              <h3>Junior full-stack developer</h3>
@@ -49,7 +51,6 @@ class App extends React.Component {
            <ParallaxLayer factor={1} offset={1} speed={0.5}>
 
             <div className="container-div">
- 
              <div className="content-div">
                
                <div className="content-heading-div">
@@ -84,10 +85,7 @@ class App extends React.Component {
                <div className="content-heading-div">
                <h2>Skills</h2>
                <div className="skills-key-div">
-               <div className="skill-type-div">
-                
-                
-                 </div>
+              
                  <div className="skill-type-div">
                  <p>Confident = </p>
                  <img src={sunflower} alt="sunflower" className="flower-image"/>
@@ -144,6 +142,7 @@ class App extends React.Component {
              </div>
            </ParallaxLayer>
 
+
            <ParallaxLayer factor={1}  offset={3} speed={0.5}>
                 <div className="container-div">
              <div className="content-div">
@@ -159,11 +158,35 @@ class App extends React.Component {
              </div>
            </ParallaxLayer>
 
+
            <ParallaxLayer factor={1}  offset={4}>
                  <div className="container-div">
              <div className="content-div">
                <div className="content-heading-div">
                <h2>Contact</h2>
+               </div>
+                
+               <div className="contacts-container">
+
+                 <div className="contact-div">
+                  <a href="https://github.com/timJFrame" target="_blank" rel="noreferrer noopener">
+                  <img src={githubLogo} alt="github logo" className="contact-logo" />
+                  </a>
+                 </div>
+
+                 <div className="contact-div">
+                  <a href="https://www.linkedin.com/in/timothyframe/" target="_blank" rel="noreferrer noopener">
+                  <img src={linkedinLogo} alt="linkedin logo" className="contact-logo" />
+                  </a>
+                 </div>
+
+                 <div className="contact-div">
+                  <a href="mailto:timothy.jarred.frame@gmail.com">
+                  <img src={emailLogo} alt="email logo" className="contact-logo" />
+                  </a>
+                 </div>
+
+               
                </div>
               
              </div>

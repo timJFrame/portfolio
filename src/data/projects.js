@@ -35,7 +35,7 @@ export default [
     projectType: '48-hour pair project',
     brief: 'Build a front-end react application that consumes a public API',
     name: 'Crypto Show',
-    description: 'My coursemate and I built a cryptocurrency website that allows users to see all cryptocurrencies, find out how much they could have made with Bitcoin or Ethereum at a given period in time, see the tweets from the top four currencies and see the day\'s biggest gainers and losers.',
+    description: 'My coursemate and I built a cryptocurrency website that allows users to see all cryptocurrencies, find out how much they could have made with Bitcoin or Ethereum at a given period in time, see the tweets from the top five currencies and see the day\'s biggest gainers and losers.',
     technologies: 'React, Axios, Bulma, React Twitter Embed and Sass',
     image: cryptoShow,
     displayImageOne: cryptoShow1,
