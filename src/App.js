@@ -39,7 +39,7 @@ class App extends React.Component {
 
              <div className="intro-div">
              <h2>Timothy Frame</h2>
-             <h3>Junior full-stack developer</h3>
+             <h3>Junior Full-stack Developer</h3>
              </div>
 
              <div className="button-div">
