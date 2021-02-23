@@ -61,7 +61,7 @@ class App extends React.Component {
 
                <div className="bio-text">
                <p>The process of creation and problem solving are two key concepts that have been prevalent to me while working as a photographer/retoucher. I began learning JavaScript to improve my Photoshop work-flow and discovered a passion for coding. Developing my technical skills and pair coding experiences with an Immersive Software Engineering program at General Assembly.</p>
-                <p>I’m now looking to continue my coding journey as a junior full-stack developer within a workplace that prides itself on employee development and where I can make a valid contribution using my prior experience in visual aesthetics married with my strong technical skills in order to help develop a positive user experience. I'm also a....</p>
+                <p>I’m now looking to continue my coding journey as a junior full-stack developer, within a workplace that prides itself on employee development and where I can make a valid contribution, using my prior experience in visual aesthetics married with my strong technical skills in order to help develop a positive user experience. I'm also a....</p>
                 </div>
 
                <div className="carousel-div">
